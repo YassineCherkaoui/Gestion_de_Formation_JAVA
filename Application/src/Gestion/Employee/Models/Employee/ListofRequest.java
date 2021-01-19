@@ -30,6 +30,7 @@ import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 public class ListofRequest extends JFrame {
 
@@ -121,7 +122,7 @@ public class ListofRequest extends JFrame {
 							}else if(Request.equals("Complate")){
 								df.addRow(new Object[] {nom,code_formation,Request});   
 							}else {
-								JOptionPane.showConfirmDialog(contentPane, "You Have No request");
+								JOptionPane.showMessageDialog(contentPane, "You Have No request");
 							}
 
 				                
@@ -146,16 +147,14 @@ public class ListofRequest extends JFrame {
 				 
 				 while(rs.next()) {
 							while (rs2.next()) {
-								String id_session = rs.getString("id_session");
 								String Request = rs2.getString("Request");
-								String id_employee = rs2.getString("id_employee");
 								if (Request.equals("Complate")) {
 									String code = rs.getString("code");
 									String libellé = rs.getString("libellé");
 									String formation = rs.getString("formation");
 									String Mois = rs.getString("Mois");
 									String annee = rs.getString("annee");
-									df.addRow(new Object[] {id_employee,id_session,code,libellé,libellé,formation,Mois,annee});
+									df.addRow(new Object[] {code,libellé,formation,Mois,annee});
 								
 								}
 
@@ -257,7 +256,7 @@ public class ListofRequest extends JFrame {
 				new Object[][] {
 				},
 				new String[] {
-					"id_employee","id_session","Code", "Libélle", "Description","mois","year"
+						"Code", "Libélle", "Description","mois","year"
 				}
 	){
 
@@ -268,6 +267,38 @@ public class ListofRequest extends JFrame {
 		table2.getColumnModel().getColumn(0).setResizable(false);
 		table2.getColumnModel().getColumn(1).setPreferredWidth(20);
 		scrollPane_1.setViewportView(table2);
+		
+		JButton btnNewButton_1_2_1 = new JButton("DETAILS\r\n");
+		btnNewButton_1_2_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					Connection connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/gestionformations","root", "");
+
+		             PreparedStatement st = (PreparedStatement) connection
+		                 .prepareStatement("SELECT * FROM employé where login=?");
+		             st.setString(1, login);
+		             ResultSet rs = st.executeQuery();
+						while (rs.next()) {
+							String id_employee = rs.getString("id_employee");	
+							String Request = rs.getString("Request");
+							if (Request.equals("Complate")) {
+						String url = "http://localhost:3000/session/"+id_employee;
+						java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+							}else if (Request.equals("Incomplate")) {
+								JOptionPane.showMessageDialog(contentPane, "Request InComplate");
+							}
+						}
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}				
+	}	
+		});
+		btnNewButton_1_2_1.setBounds(51, 623, 154, 43);
+		contentPane.add(btnNewButton_1_2_1);
 		
 	}
 }

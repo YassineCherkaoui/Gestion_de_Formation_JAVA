@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Gestion De Formation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/css/main.css"/>
+	</head>
+	<body>
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="#">Gestion de Formation <span>by Med § Yassine</span></a></div>
+			</header>
+
+		<!-- Main -->
+			<section id="main">
+				<div class="inner">
+
+				<!-- One -->
+					<section id="one" class="wrapper style1">
+
+						<div class="image fit flush">
+							<img src="/images/pic02.jpg" alt="" />
+						</div>
+						
+   						<% row.forEach(function(item, index){ %>
+						<header class="special">
+							<h2>Session de <%= item.Mois%> <%= item.annee%></h2>
+							<p>Name of formation </p>
+							<p><%= item.formation %></p>
+						</header>
+					</section>
+					<% }); %>
+
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					&copy; Med & Yassine. All rights reserved.
+				</div>
+			</footer>
+
+
+	</body>
+</html>

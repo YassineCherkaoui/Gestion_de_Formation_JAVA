@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 18, 2021 at 02:21 PM
+-- Generation Time: Jan 19, 2021 at 04:56 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -46,9 +46,10 @@ CREATE TABLE `employé` (
 
 INSERT INTO `employé` (`id_employee`, `matricule`, `nom`, `prénom`, `login`, `mot_de_passe`, `ville`, `type`, `Request`, `code_formation`) VALUES
 (1, 'Agadir', 'CHERKAOUI', 'YASSINE', 'admin', 'admin', 'AD123', 'Admin', 'Admin', ''),
-(9, 'ATY121', 'Cherkaoui', 'Yassine', 'yassine', 'yassine', 'Safi', 'Employee', 'Complate', 'AD123'),
+(9, 'ATY121', 'Cherkaoui', 'Yassine', 'yassine', 'yassine', 'Safi', 'Employee', 'Complate', 'AD454'),
 (34, 'a', 'a', 'a', 'a', 'a', 'a', 'Employee', 'Incomplate', ''),
-(35, 'YA121', 'YASSINE', 'CHERKAOUI', 'yassinee', 'yassinee', 'AGADIR', 'Employee', 'Complate', 'AD144');
+(35, 'YA121', 'YASSINE', 'CHERKAOUI', 'yassinee', 'yassinee', 'AGADIR', 'Employee', 'Complate', 'AD144'),
+(36, 'sm', 'sm', 'sm', 'sm', 'sm', 'agadir', 'Employee', 'Complate', 'AD123');
 
 -- --------------------------------------------------------
 
@@ -105,7 +106,9 @@ CREATE TABLE `session` (
 INSERT INTO `session` (`id_session`, `id_employee`, `code`, `libellé`, `formation`, `Mois`, `annee`) VALUES
 (9, 9, 'AZA22', 'AZA22', 'TICHNO', '08', 2021),
 (10, 1, 'AA121', 'AA121', 'technicien informatique', '5', 2021),
-(35, 35, '1323', '1231', 'Data Analyst', '05', 1223);
+(35, 35, '1323', '1231', 'Data Analyst', '05', 1223),
+(9, 9, 'AZA', 'AZA', 'Développeur Web', '04', 2022),
+(36, 36, 'ada11', 'ada11', 'Développeur Web', '05', 2022);
 
 --
 -- Indexes for dumped tables
@@ -131,7 +134,7 @@ ALTER TABLE `formation`
 -- AUTO_INCREMENT for table `employé`
 --
 ALTER TABLE `employé`
-  MODIFY `id_employee` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id_employee` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `formation`

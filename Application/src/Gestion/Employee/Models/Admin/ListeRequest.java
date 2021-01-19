@@ -125,7 +125,7 @@ public class ListeRequest extends JFrame {
 		contentPane.add(comboBox);
 		
 		
-		JButton btnUpdate = new JButton("Update");
+		JButton btnUpdate = new JButton("Join");
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel df = (DefaultTableModel)table.getModel();	

@@ -184,7 +184,7 @@ return checkUser;
 					Statement st = connect.createStatement();
 					ResultSet rs = st.executeQuery("Select libellé from formation");
 			                    while (rs.next()) {
-					String name = rs.getString("libellé");
+					String libellé = rs.getString("libellé");
 					combo.addItem(rs.getString("libellé"));
 					combo.setVisible(true);
 			                    }
