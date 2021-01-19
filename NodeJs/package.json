@@ -1,12 +1,12 @@
 {
   "name": "application",
   "version": "1.0.0",
-  "description": "Crud nodejs",
+  "description": "Gestion de Formation",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "npm app.js"
   },
-  "author": "Mariem Elhadki and Abdelouahab Elhassnaoui",
+  "author": "Yassine Cherkaoui and Mohamed Oubohia",
   "license": "ISC",
   "dependencies": {
     "-": "0.0.1",

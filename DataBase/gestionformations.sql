@@ -104,8 +104,7 @@ CREATE TABLE `session` (
 --
 
 INSERT INTO `session` (`id_session`, `id_employee`, `code`, `libellé`, `formation`, `Mois`, `annee`) VALUES
-(9, 9, 'AZA22', 'AZA22', 'TICHNO', '08', 2021),
-(10, 1, 'AA121', 'AA121', 'technicien informatique', '5', 2021),
+(10, 10, 'AA121', 'AA121', 'technicien informatique', '5', 2021),
 (35, 35, '1323', '1231', 'Data Analyst', '05', 1223),
 (9, 9, 'AZA', 'AZA', 'Développeur Web', '04', 2022),
 (36, 36, 'ada11', 'ada11', 'Développeur Web', '05', 2022);
