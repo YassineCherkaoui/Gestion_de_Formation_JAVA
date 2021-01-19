@@ -36,7 +36,12 @@ Durée 7 jours à compter du 12/01/20
 
 # Capture d'écran
 
-![screen]()
+![Login](https://github.com/YassineCherkaoui/Gestion_de_Formation_JAVA/blob/master/ScreenShot/login.PNG)
+![homeUser](https://github.com/YassineCherkaoui/Gestion_de_Formation_JAVA/blob/master/ScreenShot/homeUser.PNG)
+![HomeAdmin](https://github.com/YassineCherkaoui/Gestion_de_Formation_JAVA/blob/master/ScreenShot/HomeAdmin.PNG)
+![register](https://github.com/YassineCherkaoui/Gestion_de_Formation_JAVA/blob/master/ScreenShot/register.PNG)
+![ListeOfRequest](https://github.com/YassineCherkaoui/Gestion_de_Formation_JAVA/blob/master/ScreenShot/ListeOfRequest.PNG)
+![NodeJs](https://github.com/YassineCherkaoui/Gestion_de_Formation_JAVA/blob/master/ScreenShot/NodeJs.png)
 
 ## COMMENT COURIR !!
 
