@@ -35,7 +35,9 @@ app.get('/session/:id_session', (req, res) => {
        })
    
    });
-
+   app.get('/map', function (req, res) {
+    res.render('map')
+  })
 
    app.listen(port, () => {
     console.log(`http://localhost:${port}`)

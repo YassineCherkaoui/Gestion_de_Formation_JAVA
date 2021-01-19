@@ -228,6 +228,21 @@ public class Listformation extends JFrame {
 		lblNewLabel_2.setBounds(55, 670, 343, 43);
 		contentPane.add(lblNewLabel_2);
 		
+		JButton btnNewButton_1_1_1 = new JButton("SEE MAP\r\n");
+		btnNewButton_1_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					String url = "http://localhost:3000/map/";
+					java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+				} catch (Exception e2) {
+					// TODO: handle exception
+				}
+
+			}
+		});
+		btnNewButton_1_1_1.setBounds(1033, 21, 154, 43);
+		contentPane.add(btnNewButton_1_1_1);
+		
 		
 	}
 

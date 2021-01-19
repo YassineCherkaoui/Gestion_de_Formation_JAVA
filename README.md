@@ -42,6 +42,7 @@ Durée 7 jours à compter du 12/01/20
 ![register](https://github.com/YassineCherkaoui/Gestion_de_Formation_JAVA/blob/master/ScreenShot/register.PNG)
 ![ListeOfRequest](https://github.com/YassineCherkaoui/Gestion_de_Formation_JAVA/blob/master/ScreenShot/ListeOfRequest.PNG)
 ![NodeJs](https://github.com/YassineCherkaoui/Gestion_de_Formation_JAVA/blob/master/ScreenShot/NodeJs.png)
+![Map](https://github.com/YassineCherkaoui/Gestion_de_Formation_JAVA/blob/master/ScreenShot/Map.png)
 
 ## COMMENT COURIR !!
 
